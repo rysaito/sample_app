@@ -5,22 +5,27 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 gem 'bootstrap-sass', '2.3.2.0'
+gem 'bcrypt-ruby', '3.1.2'
 
 # 5章　bootstrap-sassの追加で
 # sass-railsとsprocketのバージョン等の不都合のため
 gem 'sass', '~> 3.2.0'
 gem 'sprockets', '2.11.0'
-gem 'sprockets-rails', '~> 2.0.0'
+#gem 'sprockets-rails', '~> 2.0.0'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
+  gem 'guard-rspec', '2.5.0'
 end
 
 group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 # Use SCSS for stylesheets
@@ -64,6 +69,6 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 group :production do
-  gem 'pg', '0.15.1'
+#  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
